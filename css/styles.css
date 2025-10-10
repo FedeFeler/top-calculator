@@ -26,6 +26,10 @@ body {
     margin: 0 auto;
 }
 
+.keyboard {
+    display: column;
+}
+
 .upper-buttons {
     display: flex;
     gap: 5px;
@@ -33,16 +37,20 @@ body {
     margin-left: 20px;
 }
 
+.middle-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 20px;
-    padding-top: 0;
+    padding: 0 0 0 20px;
     gap: 5px;
-    margin: 0 auto;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    
 }
 
 .number-btn,
@@ -61,4 +69,21 @@ body {
 .button-container > button:last-of-type,
 .dot-btn {
     order: 1;
+}
+
+.right-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 5px;
+}
+
+.right-btn {
+    width: 30px;
+    height: 65px;
+    border: 2px solid black;
+}
+
+.right-btn:last-of-type {
+    font-size: 10px;
 }
