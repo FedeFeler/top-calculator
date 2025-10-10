@@ -13,10 +13,13 @@ for (let i = 9; i >= 0; i--) {
 }
 
 const upperBtnCont = document.getElementById('upper-btn');
-const symbols = ["CE", "/", "X", "-"];
-symbols.forEach((item) => {
+const symbolsUpper = ["CE", "/", "X", "-"];
+symbolsUpper.forEach((item) => {
   upperBtn = document.createElement('button');
   upperBtn.classList.add('upper-btn');
   upperBtn.textContent = item;
   upperBtnCont.appendChild(upperBtn);
 })
+
+const rightBtnCont = document.getElementById("right-btn");
+const symbolsRight = ["+", "Enter"];
