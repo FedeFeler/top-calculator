@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.767);
+}
+
+.calc-body {
+    height: 300px;
+    width: 200px;
+    background-color: gray;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.display {
+    height: 30px;
+    width: 95%;
+    background-color: rgba(0, 128, 0, 0.466);
+    margin: 0 auto;
+}
