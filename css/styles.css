@@ -34,7 +34,7 @@ body {
     display: flex;
     gap: 5px;
     padding: 10px 0 5px;
-    margin-left: 13px;
+    margin-left: 12px;
 }
 
 .middle-buttons {
@@ -47,7 +47,7 @@ body {
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 0 13px;
+    padding: 0 0 0 12px;
     gap: 5px;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -75,7 +75,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-right: 11px;
+    margin-right: 12px;
 }
 
 .right-btn {
