@@ -23,4 +23,10 @@ symbolsUpper.forEach((item) => {
 
 const rightBtnCont = document.getElementById("right-btn");
 const symbolsRight = ["+", "Enter"];
+symbolsRight.forEach((item) => {
+  let rightBtn = document.createElement('button');
+  rightBtn.classList.add('right-btn');
+  rightBtn.textContent = item;
+  rightBtnCont.appendChild(rightBtn);
+})
 
