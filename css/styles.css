@@ -25,3 +25,30 @@ body {
     background-color: rgba(0, 128, 0, 0.466);
     margin: 0 auto;
 }
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 5px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    
+}
+
+.number-btn,
+.dot-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+button:last-of-type {
+    width: 65px;
+}
+
+button:last-of-type,
+.dot-btn {
+    order: 1;
+}
