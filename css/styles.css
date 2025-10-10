@@ -26,10 +26,18 @@ body {
     margin: 0 auto;
 }
 
+.upper-buttons {
+    display: flex;
+    gap: 5px;
+    padding: 20px 0 5px;
+    margin-left: 20px;
+}
+
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 0 20px;
+    padding-top: 0;
     gap: 5px;
     margin: 0 auto;
     flex-direction: row-reverse;
@@ -38,17 +46,19 @@ body {
 }
 
 .number-btn,
-.dot-btn {
+.dot-btn,
+.upper-btn {
     width: 30px;
     height: 30px;
     border: 2px solid black;
+    flex-shrink: 0;
 }
 
-button:last-of-type {
+.button-container > button:last-of-type {
     width: 65px;
 }
 
-button:last-of-type,
+.button-container > button:last-of-type,
 .dot-btn {
     order: 1;
 }

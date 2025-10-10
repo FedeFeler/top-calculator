@@ -11,3 +11,12 @@ for (let i = 9; i >= 0; i--) {
   numberBtn.textContent = i;
   buttonContainer.appendChild(numberBtn);
 }
+
+const upperBtnCont = document.getElementById('upper-btn');
+const symbols = ["CE", "/", "X", "-"];
+symbols.forEach((item) => {
+  upperBtn = document.createElement('button');
+  upperBtn.classList.add('upper-btn');
+  upperBtn.textContent = item;
+  upperBtnCont.appendChild(upperBtn);
+})
