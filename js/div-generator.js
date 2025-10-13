@@ -8,6 +8,7 @@ buttonContainer.appendChild(dotBtn);
 for (let i = 9; i >= 0; i--) {
   numberBtn = document.createElement("button");
   numberBtn.classList.add("number-btn");
+  numberBtn.classList.add(`${i}`);
   numberBtn.textContent = i;
   buttonContainer.appendChild(numberBtn);
 }
