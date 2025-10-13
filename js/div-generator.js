@@ -22,6 +22,17 @@ symbolsUpper.forEach((item) => {
   upperBtn.classList.add("upper-btn");
   upperBtn.classList.add("keyboard-btn");
   upperBtn.textContent = item;
+  if (
+    upperBtn.textContent === "-" ||
+    upperBtn.textContent === "X" ||
+    upperBtn.textContent === "/"
+  ) {
+    upperBtn.classList.add("operator-btn");
+  }
+  if (upperBtn.textContent === "CE") {
+    upperBtn.classList.add("CE-button");
+  }
+  upperBtn.setAttribute("disabled", true);
   upperBtnCont.appendChild(upperBtn);
 });
 
@@ -32,5 +43,12 @@ symbolsRight.forEach((item) => {
   rightBtn.classList.add("right-btn");
   rightBtn.classList.add("keyboard-btn");
   rightBtn.textContent = item;
+  if (rightBtn.textContent === "+") {
+    rightBtn.classList.add("operator-btn");
+  }
+  if (rightBtn.textContent === "Enter") {
+    rightBtn.classList.add("enter-btn");
+  }
+  rightBtn.setAttribute("disabled", true);
   rightBtnCont.appendChild(rightBtn);
 });
