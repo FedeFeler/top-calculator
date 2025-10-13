@@ -61,7 +61,6 @@ function displayLength() {
   element.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (display.textContent.length === 16) {
-        opBtn.forEach((btn) => btn.setAttribute("disabled", true));
         numberBtn.forEach((btn) => btn.setAttribute("disabled", true));
         dotBtn.setAttribute("disabled", true);
       }
