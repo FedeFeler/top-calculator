@@ -1,91 +1,91 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgba(0, 0, 0, 0.767);
+  background: rgba(0, 0, 0, 0.767);
 }
 
 .calc-body {
-    height: 250px;
-    width: 200px;
-    background-color: gray;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
+  height: 250px;
+  width: 200px;
+  background-color: gray;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .display {
-    height: 30px;
-    width: 95%;
-    background-color: rgba(0, 128, 0, 0.466);
-    margin: 0 auto;
-    text-align: right;
-    padding: 5px 10px;
+  height: 30px;
+  width: 95%;
+  background-color: rgba(0, 128, 0, 0.466);
+  margin: 0 auto;
+  text-align: right;
+  padding: 5px 10px;
 }
 
 .keyboard {
-    display: column;
+  display: column;
 }
 
 .upper-buttons {
-    display: flex;
-    gap: 5px;
-    padding: 10px 0 5px;
-    margin-left: 12px;
+  display: flex;
+  gap: 5px;
+  padding: 10px 0 5px;
+  margin-left: 12px;
 }
 
 .middle-buttons {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 0 0 12px;
-    gap: 5px;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 12px;
+  gap: 5px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .number-btn,
 .dot-btn,
 .upper-btn {
-    width: 30px;
-    height: 30px;
-    border: 2px solid black;
-    flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  flex-shrink: 0;
 }
 
 .button-container > button:last-of-type {
-    width: 65px;
+  width: 65px;
 }
 
 .button-container > button:last-of-type,
 .dot-btn {
-    order: 1;
+  order: 1;
 }
 
 .right-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 12px;
 }
 
 .right-btn {
-    width: 30px;
-    height: 65px;
-    border: 2px solid black;
+  width: 30px;
+  height: 65px;
+  border: 2px solid black;
 }
 
 .right-btn:last-of-type {
-    font-size: 10px;
+  font-size: 10px;
 }
