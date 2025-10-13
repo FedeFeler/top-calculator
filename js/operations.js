@@ -27,6 +27,7 @@ function display() {
   let opBtn = document.querySelectorAll(".operator-btn");
   let ceBtn = document.querySelector(".CE-button");
   let enterBtn = document.querySelector(".enter-btn");
+  let numberBtn = document.querySelectorAll(".number-btn");
   element.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("number-btn")) {
@@ -40,6 +41,7 @@ function display() {
       } else if (btn.textContent === "CE") {
         display.textContent = "";
         dotBtn.removeAttribute("disabled");
+        numberBtn.forEach((btn) => btn.removeAttribute("disabled"));
       } else if (
         btn.textContent === "+" ||
         btn.textContent === "-" ||
@@ -49,6 +51,11 @@ function display() {
         display.textContent += btn.textContent;
         opBtn.forEach((btn) => btn.setAttribute("disabled", true));
         dotBtn.removeAttribute("disabled");
+      }
+      if (display.textContent.length === 16) {
+        opBtn.forEach((btn) => btn.setAttribute("disabled", true));
+        numberBtn.forEach((btn) => btn.setAttribute("disabled", true));
+        dotBtn.setAttribute("disabled", true);
       }
     });
   });
