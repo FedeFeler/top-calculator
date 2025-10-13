@@ -82,7 +82,7 @@ function handleDisplay() {
     number2 = Number(operand);
     if (number1 !== null && number2 !== null && operator) {
       operate(number1, number2, operator);
-      operand = "";
+      operand = display.textContent;
       number1 = null;
       number2 = null;
       operator = null;
