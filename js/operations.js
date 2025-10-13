@@ -22,8 +22,8 @@ function divide(a, b) {
   return a / b;
 }
 let operand = "";
-let number1;
-let number2;
+let number1 = null;
+let number2 = null;
 let operator;
 
 function operate(number1, number2, operator) {
@@ -46,14 +46,13 @@ function handleDisplay() {
   element.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("number-btn")) {
-        display.textContent += btn.textContent;
+        display.textContent = btn.textContent;
         operand += btn.textContent;
         opBtn.forEach((btn) => btn.removeAttribute("disabled"));
         ceBtn.removeAttribute("disabled");
         enterBtn.removeAttribute("disabled");
       } else if (btn.classList.contains("dot-btn")) {
         display.textContent += btn.textContent;
-        operand += btn.textContent;
         dotBtn.setAttribute("disabled", true);
       } else if (
         btn.textContent === "+" ||
@@ -61,12 +60,25 @@ function handleDisplay() {
         btn.textContent === "X" ||
         btn.textContent === "/"
       ) {
-        number1 = Number(operand);
-        operator = btn.textContent;
-        operand = "";
-        display.textContent += btn.textContent;
-        dotBtn.removeAttribute("disabled");
-        opBtn.forEach((btn) => btn.setAttribute("disabled", true));
+        if (number1 === null) {
+          number1 = Number(operand);
+          operator = btn.textContent;
+          operand = "";
+          dotBtn.removeAttribute("disabled");
+          opBtn.forEach((btn) => btn.setAttribute("disabled", true));
+        } else if (number1 !== null && number2 === null) {
+          number2 = Number(operand);
+          operate(number1, number2, operator);
+          number1 = Number(display.textContent);
+          operator = btn.textContent;
+          operand = "";
+          opBtn.forEach((btn) => btn.removeAttribute("disabled"));
+          number2 = null;
+          console.log(number1);
+          console.log(number2);
+        } else if (number1 !== null && number2 !== null && operator) {
+          operate(number1, number2, operator);
+        }
       } else if (btn.textContent === "CE") {
         display.textContent = "";
         operand = "";
