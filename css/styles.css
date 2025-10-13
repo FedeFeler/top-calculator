@@ -24,6 +24,8 @@ body {
     width: 95%;
     background-color: rgba(0, 128, 0, 0.466);
     margin: 0 auto;
+    text-align: right;
+    padding: 5px 10px;
 }
 
 .keyboard {
