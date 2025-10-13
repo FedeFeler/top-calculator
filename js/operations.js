@@ -1,3 +1,11 @@
+let element = document.querySelectorAll(".keyboard-btn");
+let display = document.querySelector(".display");
+let dotBtn = document.querySelector(".dot-btn");
+let opBtn = document.querySelectorAll(".operator-btn");
+let ceBtn = document.querySelector(".CE-button");
+let enterBtn = document.querySelector(".enter-btn");
+let numberBtn = document.querySelectorAll(".number-btn");
+
 function sum(a, b) {
   return a + b;
 }
@@ -20,14 +28,7 @@ let operator;
 
 function operate(number1, number2, operator) {}
 
-function display() {
-  let element = document.querySelectorAll(".keyboard-btn");
-  let display = document.querySelector(".display");
-  let dotBtn = document.querySelector(".dot-btn");
-  let opBtn = document.querySelectorAll(".operator-btn");
-  let ceBtn = document.querySelector(".CE-button");
-  let enterBtn = document.querySelector(".enter-btn");
-  let numberBtn = document.querySelectorAll(".number-btn");
+function handleDisplay() {
   element.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("number-btn")) {
@@ -60,4 +61,4 @@ function display() {
     });
   });
 }
-display();
+handleDisplay();
