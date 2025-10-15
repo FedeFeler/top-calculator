@@ -54,8 +54,8 @@ function handleDisplay() {
   element.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("number-btn")) {
-        display.textContent = btn.textContent;
-        operand += btn.textContent;
+        display.textContent += btn.textContent;
+        operand = display.textContent;
         opBtn.forEach((btn) => btn.removeAttribute("disabled"));
         ceBtn.removeAttribute("disabled");
         enterBtn.removeAttribute("disabled");
@@ -74,6 +74,7 @@ function handleDisplay() {
           operand = "";
           dotBtn.removeAttribute("disabled");
           opBtn.forEach((btn) => btn.setAttribute("disabled", true));
+          display.textContent = "";
         } else if (number1 !== null && number2 === null) {
           number2 = Number(operand);
           operate(number1, number2, operator);
@@ -82,6 +83,8 @@ function handleDisplay() {
           operand = "";
           opBtn.forEach((btn) => btn.removeAttribute("disabled"));
           number2 = null;
+          display.textContent = "";
+          dotBtn.removeAttribute("disabled");
           console.log(number1);
           console.log(number2);
         } else if (number1 !== null && number2 !== null && operator) {
