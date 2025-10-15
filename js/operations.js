@@ -27,27 +27,28 @@ let number2 = null;
 let operator;
 
 function operate(number1, number2, operator) {
+  let result;
   if (operator === "+") {
     result = sum(number1, number2);
-    display.textContent = `${result}`;
+    //display.textContent = `${result}`;
   } else if (operator === "/") {
     if (number2 === 0) {
       display.textContent = "Can't divide by 0. Press CE to continue.";
       display.style.fontSize = "11px";
       element.forEach((btn) => btn.setAttribute("disabled", true));
       ceBtn.removeAttribute("disabled");
+      return;
     }
     else {
     result = divide(number1, number2);
-    display.textContent = `${result}`;
     }
   } else if (operator === "-") {
     result = subtract(number1, number2);
-    display.textContent = `${result}`;
   } else if (operator === "X") {
     result = multiply(number1, number2);
-    display.textContent = `${result}`;
   }
+  result = Math.round(result * 1e10) / 1e10;
+  display.textContent = result;
 }
 
 function handleDisplay() {
