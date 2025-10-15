@@ -89,3 +89,12 @@ body {
 .right-btn:last-of-type {
   font-size: 10px;
 }
+
+.keyboard-btn:disabled {
+  background-color: rgb(239, 239, 239);
+  color: rgb(0, 0, 0);
+}
+
+.keyboard-btn:active {
+  background-color:rgba(0, 128, 0, 0.466);
+}
