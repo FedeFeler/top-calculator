@@ -31,8 +31,16 @@ function operate(number1, number2, operator) {
     result = sum(number1, number2);
     display.textContent = `${result}`;
   } else if (operator === "/") {
+    if (number2 === 0) {
+      display.textContent = "Can't divide by 0. Press CE to continue.";
+      display.style.fontSize = "11px";
+      element.forEach((btn) => btn.setAttribute("disabled", true));
+      ceBtn.removeAttribute("disabled");
+    }
+    else {
     result = divide(number1, number2);
     display.textContent = `${result}`;
+    }
   } else if (operator === "-") {
     result = subtract(number1, number2);
     display.textContent = `${result}`;
@@ -87,6 +95,7 @@ function handleDisplay() {
         operator = null;
         dotBtn.removeAttribute("disabled");
         numberBtn.forEach((btn) => btn.removeAttribute("disabled"));
+        display.style.fontSize = "16px";
       }
     });
   });
@@ -112,5 +121,9 @@ function displayLength() {
     });
   });
 }
+
+
+
 handleDisplay();
 displayLength();
+
