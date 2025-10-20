@@ -96,5 +96,11 @@ body {
 }
 
 .keyboard-btn:active {
-  background-color:rgba(0, 128, 0, 0.466);
+  /*background-color:rgba(0, 128, 0, 0.466);*/
+  border: black inset;
+  font-size: 0.77rem;
+}
+
+.enter-btn:active {
+  font-size: 0.62rem;
 }
